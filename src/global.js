@@ -1,1 +1,1 @@
-export const baseUrl = `https://api.schooldigger.com/v1.2/schools`;
+export const baseUrl = `https://api.schooldigger.com/v1/schools`;

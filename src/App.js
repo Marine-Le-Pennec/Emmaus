@@ -31,7 +31,7 @@ function App() {
 			console.log(2);
 			if (stateInput && schoolInput) {
 				const response = await axios.get(
-					`${baseUrl}?st=${stateInput}&q={schoolInput}%20High%20School&appID={process.env.REACT_APP_APP_ID}&appKey=${process.env.REACT_APP_API_KEY}`
+					`${baseUrl}?st=${stateInput}&q={schoolInput}&appID={process.env.REACT_APP_APP_ID}&appKey=${process.env.REACT_APP_API_KEY}`
 				);
 				console.log(3);
 				setResult(response.data);
