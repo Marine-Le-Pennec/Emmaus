@@ -1,0 +1,17 @@
+.footer-text-wrapper {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-text-wrapper p {
+	font-size: 1em;
+	color: #011149;
+}
+
+a {
+	text-decoration: none;
+	font-style: italic;
+	color: #011149;
+}
