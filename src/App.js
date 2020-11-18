@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 
-// Base URL
-import { baseUrl } from './global';
-
 // css
 import './assets/css/App.css';
 
@@ -15,27 +12,20 @@ import Footer from './Components/Footer';
 import Form from './Components/Form';
 import SchoolCard from './Components/SchoolCard';
 
-console.log(baseUrl);
-
 function App() {
 	const [stateInput, setStateInput] = useState('');
 	const [schoolInput, setSchoolInput] = useState('');
 
 	const [result, setResult] = useState([]);
-	console.log(stateInput);
 
 	// Fetchdata
 	const fetchData = async () => {
-		console.log(1);
 		try {
-			console.log(2);
-			if (stateInput && schoolInput) {
-				const response = await axios.get(
-					`${baseUrl}?st=${stateInput}&q={schoolInput}&appID={process.env.REACT_APP_APP_ID}&appKey=${process.env.REACT_APP_API_KEY}`
-				);
-				console.log(3);
-				setResult(response.data);
-			}
+			const response = await axios.get(
+				`https://api.schooldigger.com/v1/schools?st=${stateInput}&q=${schoolInput}&appID=${process.env.REACT_APP_APP_ID}&appKey=${process.env.REACT_APP_API_KEY}`
+			);
+
+			setResult(response.data);
 		} catch (e) {
 			alert('An error occurred');
 		}
@@ -43,28 +33,33 @@ function App() {
 
 	return (
 		<div className='App'>
-			<header>
-				<Header />
-			</header>
-			<div className='form-wrapper'>
-				<Form
-					setStateInput={setStateInput}
-					setSchoolInput={setSchoolInput}
-					handleSubmit={fetchData}
-				/>
+			<div className='wrapper'>
+				<header>
+					<Header />
+				</header>
+				<div className='form-wrapper'>
+					<Form
+						setStateInput={setStateInput}
+						setSchoolInput={setSchoolInput}
+						handleSubmit={(e) => {
+							e.preventDefault();
+							fetchData();
+						}}
+					/>
+				</div>
+				<div className='result-container'>
+					<p>{result.numberOfSchools} school(s) found</p>
+				</div>
+				<main>
+					{result.length === 0 ? (
+						<div></div>
+					) : (
+						result.schoolList.map((infos, i) => {
+							return <SchoolCard infos={infos} key={i} />;
+						})
+					)}
+				</main>
 			</div>
-			<div className='result-container'>
-				<p>Number of results {result.numberOfSchools}</p>
-			</div>
-			<main>
-				{result.length === 0 ? (
-					<div></div>
-				) : (
-					result.schoolList.map((infos, i) => {
-						return <SchoolCard infos={infos} key={i} />;
-					})
-				)}
-			</main>
 			<footer>
 				<Footer />
 			</footer>

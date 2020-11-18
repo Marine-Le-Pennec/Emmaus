@@ -10,7 +10,6 @@ const Form = ({ setSchoolInput, setStateInput, handleSubmit }) => {
 		<form className='form-container' onSubmit={handleSubmit}>
 			<input
 				placeholder='State (ex : CA)'
-				required
 				onChange={(e) => setStateInput(e.target.value)}
 			/>
 			<input
