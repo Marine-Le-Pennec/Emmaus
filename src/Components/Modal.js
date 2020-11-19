@@ -32,9 +32,7 @@ const Modal = ({ hide, infos }) => {
 					mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}>
 					<Marker
 						latitude={infos.address.latLong.latitude}
-						longitude={infos.address.latLong.longitude}
-						offsetLeft={-20}
-						offsetTop={-10}>
+						longitude={infos.address.latLong.longitude}>
 						<img src={marker} alt='marker' />
 					</Marker>
 				</ReactMapGL>
