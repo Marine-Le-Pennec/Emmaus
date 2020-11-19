@@ -22,7 +22,7 @@
 }
 .location-image-container {
 	height: 100%;
-	width: 10%;
+	/* width: 10%; */
 	/* flex */
 	display: flex;
 	justify-content: flex-end;
@@ -49,4 +49,26 @@
 
 .location-image-container img {
 	height: 100%;
+}
+
+/* Media query */
+@media screen and (max-width: 650px) {
+	.location-button {
+		height: 50%;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.schoolcard-container p {
+		font-size: 0.9em;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.schoolcard-container p {
+		font-size: 0.6em;
+	}
+	.location-button {
+		height: 30%;
+	}
 }
