@@ -42,3 +42,13 @@ input::placeholder {
 .submit-button img {
 	height: 50%;
 }
+
+/* Media Query */
+@media screen and (max-width: 450px) {
+	input {
+		font-size: 1em;
+	}
+	input::placeholder {
+		font-size: 0.7em;
+	}
+}
