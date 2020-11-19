@@ -6,6 +6,7 @@ import '../assets/css/Form.css';
 import search from '../assets/img/search.svg';
 
 const Form = ({ setSchoolInput, setStateInput, handleSubmit }) => {
+	// ------------------JSX---------------------
 	return (
 		<form className='form-container' onSubmit={handleSubmit}>
 			<input
