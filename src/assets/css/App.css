@@ -3,14 +3,7 @@
 	width: 100vw;
 	/* height: 100%; */
 	font-family: 'Rajdhani', sans-serif;
-	/* box-sizing: border-box; */
-	/* background-image: url(/static/media/background.145aab52.jpg); */
-	/* background-repeat: no-repeat; */
-	/* display: flex; */
-	/* flex-direction: column; */
-}
-
-.wrapper {
+	box-sizing: border-box;
 	background-image: url('../img/background.jpg');
 	background-repeat: no-repeat;
 	display: flex;
