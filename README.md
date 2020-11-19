@@ -1,10 +1,12 @@
 # Test technique pour Emmaüs
-Le project s'initialise avec `yarn`
+Le project s'initialise avec `yarn` 
 Il a été réalisé en Javascript sous le framework React.js.
 L'api utilisée est [SchoolDigger](https://any-api.com/schooldigger_com/schooldigger_com/docs/_v1_schools/Schools_GetAllSchools)
 
 ### L'application est déployée sur Netlify ! 
 ### Vous pouvez la voir [ici](https://marine-le-pennec-emmaus.netlify.app/)
+
+/!\ Le .env contenant les variables d'environnement est dans le fichier gitignore. Il faut utiliser votre clé personnelle pour accéder à l'API de SchoolDigger ou consulter l'application sur Netflify.
 
 ## Fonctionnalités 
 L'application contient les fonctionnalités suivantes :
