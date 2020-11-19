@@ -3,6 +3,9 @@ Le project s'initialise avec `yarn`
 Il a été réalisé en Javascript sous le framework React.js.
 L'api utilisée est [SchoolDigger](https://any-api.com/schooldigger_com/schooldigger_com/docs/_v1_schools/Schools_GetAllSchools)
 
+### L'application est déployée sur Netlify ! 
+### Vous pouvez la voir [ici](https://marine-le-pennec-emmaus.netlify.app/)
+
 ## Fonctionnalités 
 L'application contient les fonctionnalités suivantes :
 
