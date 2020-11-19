@@ -12,6 +12,17 @@ import Footer from './Components/Footer';
 import Form from './Components/Form';
 import SchoolCard from './Components/SchoolCard';
 
+// Logo(s)
+import left from './assets/img/angle-left-solid.svg';
+import right from './assets/img/angle-right-solid.svg';
+
+/** Function to fetch data
+ *
+ * @param {stateInput} state
+ * @param {schoolInput} query
+ * @param {page} page
+ */
+
 const fetchData = async (state, query, page = 1) => {
 	if (!state || !query) {
 		throw new Error('No query');
@@ -25,11 +36,15 @@ const fetchData = async (state, query, page = 1) => {
 };
 
 function App() {
+	// -----------------States-----------------------
 	const [result, setResult] = useState({});
 	const [stateInput, setStateInput] = useState('');
 	const [schoolInput, setSchoolInput] = useState('');
 	const [page, setPage] = useState(1);
 
+	// --------useEffect---------------------------
+
+	// Using a useEffect to handle the page' changing and set the data into result state
 	useEffect(() => {
 		if (stateInput.length > 0 && schoolInput.length > 0) {
 			fetchData(stateInput, schoolInput, page).then((data) => {
@@ -37,7 +52,7 @@ function App() {
 			});
 		}
 	}, [page]);
-
+	// ----------------------JSX---------------------------
 	return (
 		<div className='App'>
 			<header>
@@ -47,6 +62,7 @@ function App() {
 				<Form
 					setStateInput={setStateInput}
 					setSchoolInput={setSchoolInput}
+					// using a function to submit the form and start searching
 					handleSubmit={async (e) => {
 						e.preventDefault();
 						try {
@@ -73,20 +89,20 @@ function App() {
 				)}
 			</main>
 
-			<div>
+			<div className='pagination-container'>
 				<button
 					type='button'
 					onClick={() => {
 						setPage((page) => page - 1);
 					}}>
-					Previous
+					<img src={left} alt='previous' />
 				</button>
 				<button
 					type='button'
 					onClick={() => {
 						setPage((page) => page + 1);
 					}}>
-					Next
+					<img src={right} alt='next' />
 				</button>
 			</div>
 			<footer>
