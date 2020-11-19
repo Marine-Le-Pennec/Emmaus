@@ -1,13 +1,17 @@
 .App {
 	text-align: center;
 	width: 100vw;
-	/* height: 100%; */
+	height: 100vh;
 	font-family: 'Rajdhani', sans-serif;
 	box-sizing: border-box;
 	background-image: url('../img/background.jpg');
 	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: column;
+}
+
+.hide {
+	display: none;
 }
 
 header {
@@ -49,6 +53,7 @@ main {
 	margin-top: 3%;
 
 	/* Flex */
+	flex: 1;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

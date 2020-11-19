@@ -1,0 +1,45 @@
+.modal-wrapper {
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgba(0, 0, 0, 0.4);
+	/* flex */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-container {
+	width: 1000px;
+	height: 600px;
+	background: transparent;
+	border-radius: 10px;
+	position: relative;
+	/* flex */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.modal-container button {
+	border: none;
+	background-color: transparent;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 2%;
+	right: 2%;
+}
+.modal-container button img {
+	height: 100%;
+	width: 100%;
+}
+
+.mapbox-react img {
+	height: 30px;
+}
