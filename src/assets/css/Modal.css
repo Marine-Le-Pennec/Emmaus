@@ -14,8 +14,8 @@
 }
 
 .modal-container {
-	width: 1000px;
-	height: 600px;
+	width: 85vw;
+	height: 90vh;
 	background: transparent;
 	border-radius: 10px;
 	position: relative;
@@ -32,7 +32,7 @@
 	width: 30px;
 	height: 30px;
 	position: absolute;
-	top: 2%;
+	top: 0;
 	right: 2%;
 }
 .modal-container button img {
@@ -43,3 +43,14 @@
 .mapbox-react img {
 	height: 30px;
 }
+
+/* Media Query
+@media screen and (max-width: 800px) {
+	.modal-container {
+		width: 700px;
+		height: 600px;
+	}
+	.modal-container button {
+		right: 2%;
+	}
+} */
