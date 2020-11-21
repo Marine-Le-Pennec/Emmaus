@@ -1,13 +1,20 @@
 # Test technique pour Emmaüs
-Le project s'initialise avec `yarn`
+Le project s'initialise avec `yarn` 
 Il a été réalisé en Javascript sous le framework React.js.
-L'api utilisée est [SchoolDigger](https://any-api.com/schooldigger_com/schooldigger_com/docs/_v1_schools/Schools_GetAllSchools)
+L'api utilisée est [SchoolDigger](https://any-api.com/schooldigger_com/schooldigger_com/docs/_v1_schools/Schools_GetAllSchools).
+
+### L'application est déployée sur Netlify ! 
+### Vous pouvez la voir [ici](https://marine-le-pennec-emmaus.netlify.app/)
+
+#### La maquette réalisée au préalable est visible sur [Figma](https://www.figma.com/file/ZJjfE0LOq1WZJ6Je5AzK40/Find-a-school?node-id=1%3A2)
+
+/!\ Le .env contenant les variables d'environnement est dans le fichier gitignore. Il faut utiliser votre clé personnelle pour accéder à l'API de SchoolDigger ou consulter l'application sur Netflify.
 
 ## Fonctionnalités 
 L'application contient les fonctionnalités suivantes :
 
  - Rechercher une école par État et par nom d'école. Si l'input pour rechercher l'école n'est pas rempli, toutes les écoles de l'État choisi sont recherchées.
- - Système très simple de pagination en exploitant la query `page` proposée par l'API. 
+ - Système très simple de pagination en exploitant la query `page` proposée par l'API. (Cependant, cette fonctionnalité impose d'effectuer une requête à l'API à chaque changement de page)
  - Possibilité de voir la position de l'école grâce à un marqueur sur une carte.
  
  
