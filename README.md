@@ -6,6 +6,8 @@ L'api utilisée est [SchoolDigger](https://any-api.com/schooldigger_com/schooldi
 ### L'application est déployée sur Netlify ! 
 ### Vous pouvez la voir [ici](https://marine-le-pennec-emmaus.netlify.app/)
 
+#### La maquette réalisée au préalable est visible sur [Figma](https://www.figma.com/file/ZJjfE0LOq1WZJ6Je5AzK40/Find-a-school?node-id=1%3A2)
+
 /!\ Le .env contenant les variables d'environnement est dans le fichier gitignore. Il faut utiliser votre clé personnelle pour accéder à l'API de SchoolDigger ou consulter l'application sur Netflify.
 
 ## Fonctionnalités 
