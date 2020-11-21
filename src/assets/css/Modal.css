@@ -43,14 +43,3 @@
 .mapbox-react img {
 	height: 30px;
 }
-
-/* Media Query
-@media screen and (max-width: 800px) {
-	.modal-container {
-		width: 700px;
-		height: 600px;
-	}
-	.modal-container button {
-		right: 2%;
-	}
-} */
