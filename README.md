@@ -12,7 +12,7 @@ L'api utilisée est [SchoolDigger](https://any-api.com/schooldigger_com/schooldi
 L'application contient les fonctionnalités suivantes :
 
  - Rechercher une école par État et par nom d'école. Si l'input pour rechercher l'école n'est pas rempli, toutes les écoles de l'État choisi sont recherchées.
- - Système très simple de pagination en exploitant la query `page` proposée par l'API. 
+ - Système très simple de pagination en exploitant la query `page` proposée par l'API. (Cependant, cette fonctionnalité impose d'effectuer une requête à l'API à chaque changement de page)
  - Possibilité de voir la position de l'école grâce à un marqueur sur une carte.
  
  
