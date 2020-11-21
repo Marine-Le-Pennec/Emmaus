@@ -35,8 +35,8 @@ const Modal = ({ hide, infos }) => {
 				<div className='mapbox-react'>
 					<ReactMapGL
 						{...viewport}
-						width='1000px'
-						height='500px'
+						width='80vw'
+						height='80vh'
 						mapStyle='mapbox://styles/mapbox/streets-v11'
 						onViewportChange={(nextViewport) => setViewport(nextViewport)}
 						mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}>
